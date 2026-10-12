@@ -1,24 +1,118 @@
 <!DOCTYPE html>
 <html lang="id">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PrakPemWeb - Pertemuan 2</title>
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-</head>
-<body>
-  <header><h1>Struktur Project Flask</h1></header>
-  <main>
-    <section>
-      <h2>Struktur Folder:</h2>
-      <ul>
-        <li><strong>app.py</strong> - File utama aplikasi Flask</li>
-        <li><strong>templates/</strong> - Folder untuk file HTML</li>
-        <li><strong>static/css/</strong> - Folder untuk file CSS</li>
-        <li><strong>static/images/</strong> - Folder untuk gambar</li>
-      </ul>
-    </section>
-  </main>
-  <footer><p>Praktikum Pemrograman Web - Pertemuan 2</p></footer>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Git Init &amp; .gitignore</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <div class="badge">Praktikum • Part 6 — mulai repo lokal</div>
+
+      <h1 class="main-title">git init &amp; buat .gitignore</h1>
+
+      <div class="platform-switcher">
+        <button class="platform active">Windows</button>
+        <button class="platform">Linux / macOS</button>
+      </div>
+
+      <div class="content-grid">
+        <section class="lesson-panel left-panel">
+          <div class="window-bar">
+            <div class="traffic-lights">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+            </div>
+            <div class="window-title">PrakPemWeb — mulai repo</div>
+          </div>
+
+          <div class="code-block">
+            <p class="command-line">
+              PS C:\Users\user\PrakPemWeb&gt; <span class="command">git init</span>
+            </p>
+          </div>
+
+          <div class="button-row">
+            <button>ulangi</button>
+            <button>tampilkan output</button>
+            <button>salin perintah</button>
+          </div>
+
+          <p class="lesson-text">
+            git init membuat folder tersembunyi <span class="code">.git</span> — di sanalah seluruh
+            riwayat proyek disimpan. Konversi <span class="code">.gitignore</span> :
+            <span class="code">.venv/</span>, <span class="code">__pycache__/</span>,
+            <span class="code">*.pyc</span>, <span class="code">.env</span> — file yang tidak perlu
+            masuk repo.
+          </p>
+        </section>
+
+        <section class="lesson-panel right-panel">
+          <div class="vscode-header">
+            <div class="vscode-tabs">
+              <span>PROBLEMS</span>
+              <span>OUTPUT</span>
+              <span>DEBUG CONSOLE</span>
+              <span class="active">TERMINAL</span>
+              <span>PORTS</span>
+            </div>
+          </div>
+
+          <div class="terminal-box">
+            <div class="terminal-line top-line">
+              <span class="terminal-arrow">&gt;</span>
+              <span class="shell-name">bash</span>
+              <span class="shell-path">PrakPemWeb</span>
+              <span class="status-pill">28ms</span>
+            </div>
+            <div class="terminal-line command-line-row">
+              <span class="terminal-arrow">&gt;</span>
+              <span class="command-text">git init</span>
+            </div>
+            <div class="terminal-hint">
+              hint: Using 'master' as the name for the initial branch. hint: If you would like to
+              configure the default branch name, etc.
+            </div>
+          </div>
+
+          <div class="terminal-card">
+            <div class="card-tag">p2 14</div>
+            <div class="card-content">
+              <span class="card-name">git init</span>
+              <p>repo lokal dimulai</p>
+            </div>
+            <div class="card-icon">⌕</div>
+          </div>
+
+          <div class="explorer-box">
+            <div class="explorer-header">
+              <span>EXPLORER</span>
+              <span class="explorer-actions">⋯</span>
+            </div>
+            <div class="explorer-list">
+              <div class="folder-row">
+                <span class="folder-label">PrakPemWeb</span>
+              </div>
+              <div class="file-row">.gitignore</div>
+              <div class="file-row">.venv</div>
+              <div class="file-row">__pycache__</div>
+              <div class="file-row">*.pyc</div>
+              <div class="file-row">.env</div>
+            </div>
+          </div>
+
+          <div class="terminal-card bottom-card">
+            <div class="card-tag">p2 15</div>
+            <div class="card-content">
+              <span class="card-name">.gitignore</span>
+              <p>kecualikan .venv dan cache</p>
+            </div>
+            <div class="card-icon">⌕</div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </body>
 </html>
