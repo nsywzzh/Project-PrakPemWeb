@@ -1,118 +1,84 @@
 <!DOCTYPE html>
-<html lang="id">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Git Init &amp; .gitignore</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
-  </head>
-  <body>
-    <div class="page-shell">
-      <div class="badge">Praktikum • Part 6 — mulai repo lokal</div>
+<html lang="id" style="background-color:#0A0A0C;color-scheme:dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nasywaa — Home</title>
+    <style>html,body{background-color:#0A0A0C}</style>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <a href="/" class="logo"><span>N</span>asywaa</a>
+        <nav>
+            <a href="/" class="active">Home</a>
+            <a href="/about">About</a>
+            <a href="/skills">Skills</a>
+            <a href="/projects">Projects</a>
+            <a href="/blog">Blog</a>
+            <a href="/contact">Contact</a>
+        </nav>
+    </header>
 
-      <h1 class="main-title">git init &amp; buat .gitignore</h1>
-
-      <div class="platform-switcher">
-        <button class="platform active">Windows</button>
-        <button class="platform">Linux / macOS</button>
-      </div>
-
-      <div class="content-grid">
-        <section class="lesson-panel left-panel">
-          <div class="window-bar">
-            <div class="traffic-lights">
-              <span class="dot red"></span>
-              <span class="dot yellow"></span>
-              <span class="dot green"></span>
+    <main>
+        <section class="hero">
+            <div class="hero-image">
+                <img src="{{ url_for('static', filename='images/Nasywaa.jpg') }}" alt="Nasywaa">
             </div>
-            <div class="window-title">PrakPemWeb — mulai repo</div>
-          </div>
-
-          <div class="code-block">
-            <p class="command-line">
-              PS C:\Users\user\PrakPemWeb&gt; <span class="command">git init</span>
-            </p>
-          </div>
-
-          <div class="button-row">
-            <button>ulangi</button>
-            <button>tampilkan output</button>
-            <button>salin perintah</button>
-          </div>
-
-          <p class="lesson-text">
-            git init membuat folder tersembunyi <span class="code">.git</span> — di sanalah seluruh
-            riwayat proyek disimpan. Konversi <span class="code">.gitignore</span> :
-            <span class="code">.venv/</span>, <span class="code">__pycache__/</span>,
-            <span class="code">*.pyc</span>, <span class="code">.env</span> — file yang tidak perlu
-            masuk repo.
-          </p>
+            <div class="hero-text">
+                <p class="tagline">Mahasiswa Informatika</p>
+                <h2>Alooo, aku <span class="highlight">Nasywaa!!!</span><br>
+                    <span class="typewriter">Aku lagi coba bikin web.</span></h2>
+                <p>Aku adalah mahasiswa Informatika yang tertarik mempelajari hal-hal baru. Kenalin ya, ini sudut kecil aku di internet.</p>
+            </div>
         </section>
 
-        <section class="lesson-panel right-panel">
-          <div class="vscode-header">
-            <div class="vscode-tabs">
-              <span>PROBLEMS</span>
-              <span>OUTPUT</span>
-              <span>DEBUG CONSOLE</span>
-              <span class="active">TERMINAL</span>
-              <span>PORTS</span>
+        <section class="section">
+            <h3 class="section-title">Mata Kuliah</h3>
+            <div class="card-grid stagger">
+                <div class="card-3d">
+                    <h4><span>01</span> Pemrograman Web</h4>
+                    <p>Menyusun logika dibalik layar agar website bisa berjalan dengan cepat, stabil, dan responsif.</p>
+                </div>
+                <div class="card-3d">
+                    <h4><span>02</span> Basis Data</h4>
+                    <p>Menyimpan, merapikan, dan mengamankan data agar mudah dipanggil kapan saja.</p>
+                </div>
+                <div class="card-3d">
+                    <h4><span>03</span> Desain UI/UX</h4>
+                    <p>Memahami kebutuhan pengguna, lalu meraciknya menjadi desain antarmuka yang simple dan solutif.</p>
+                </div>
             </div>
-          </div>
-
-          <div class="terminal-box">
-            <div class="terminal-line top-line">
-              <span class="terminal-arrow">&gt;</span>
-              <span class="shell-name">bash</span>
-              <span class="shell-path">PrakPemWeb</span>
-              <span class="status-pill">28ms</span>
-            </div>
-            <div class="terminal-line command-line-row">
-              <span class="terminal-arrow">&gt;</span>
-              <span class="command-text">git init</span>
-            </div>
-            <div class="terminal-hint">
-              hint: Using 'master' as the name for the initial branch. hint: If you would like to
-              configure the default branch name, etc.
-            </div>
-          </div>
-
-          <div class="terminal-card">
-            <div class="card-tag">p2 14</div>
-            <div class="card-content">
-              <span class="card-name">git init</span>
-              <p>repo lokal dimulai</p>
-            </div>
-            <div class="card-icon">⌕</div>
-          </div>
-
-          <div class="explorer-box">
-            <div class="explorer-header">
-              <span>EXPLORER</span>
-              <span class="explorer-actions">⋯</span>
-            </div>
-            <div class="explorer-list">
-              <div class="folder-row">
-                <span class="folder-label">PrakPemWeb</span>
-              </div>
-              <div class="file-row">.gitignore</div>
-              <div class="file-row">.venv</div>
-              <div class="file-row">__pycache__</div>
-              <div class="file-row">*.pyc</div>
-              <div class="file-row">.env</div>
-            </div>
-          </div>
-
-          <div class="terminal-card bottom-card">
-            <div class="card-tag">p2 15</div>
-            <div class="card-content">
-              <span class="card-name">.gitignore</span>
-              <p>kecualikan .venv dan cache</p>
-            </div>
-            <div class="card-icon">⌕</div>
-          </div>
         </section>
-      </div>
-    </div>
-  </body>
+
+        <section class="section stagger">
+            <h3 class="section-title">Statistik Cepat</h3>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10L12 5 2 10l10 5 10-5z"/><path d="M6 12v5c0 1.5 3 3 6 3s6-1.5 6-3v-5"/></svg></div>
+                    <div class="number">3</div><div class="label">Semester</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg></div>
+                    <div class="number">5</div><div class="label">Proyek</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M8 9l-4 3 4 3M16 9l4 3-4 3M13 5l-2 14"/></svg></div>
+                    <div class="number">2</div><div class="label">Bahasa</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+                    <div class="number">∞</div><div class="label">Rasa Ingin Tahu</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        &copy; 2026 Nasywaa
+    </footer>
+</body>
 </html>
